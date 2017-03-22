@@ -2,29 +2,42 @@ package programajesus;
 
 public class ProgramaJesus {
     
-    public static void porcentajeBarca(double numerobarça, double numeroalumnos){
+    public static double porcentajeBarca(double numerobarça, double numeroalumnos){
         
         double resultado;
         
         resultado=numerobarça*100/numeroalumnos;
         
-        System.out.println("El porcentaje de alumnos que quiere que gane el barça es: "+resultado);
+        return resultado;
     }
     
-    
-    public static void porcentajeMadrid(double numeromadrid, double numeroalumnos){
+    public static double porcentajeMadrid(double numeromadrid, double numeroalumnos){
         
         double resultado;
         
         resultado=numeromadrid*100/numeroalumnos;
         
-        System.out.println("El porcentaje de alumnos que quiere que no se clasefique el madrid es: "+resultado);
+        return resultado;
     }
-
+    
+    public static int diferencia(int numerobarça,int numeromadrid){
+        
+        int x=numerobarça-numeromadrid;
+        
+        return x;
+    }
+   
     public static void main(String[] args) {
         
-        porcentajeBarca(13,30);
-        porcentajeMadrid(7,30);
+        double encuestabarca=porcentajeBarca(13,30);
+        double encuestamadrid=porcentajeMadrid(7,30);
+        
+        if(encuestabarca==encuestamadrid){
+            System.out.println("¿De verdad no queremos un partido de la Champions Barça-Real Madrid?");
+        }else{
+            System.out.println("Menos mal que hay "+diferencia(13,7)+" sensat@s");
+        }
+        
         
     }
     
