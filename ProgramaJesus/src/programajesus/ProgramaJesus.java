@@ -13,7 +13,7 @@ public class ProgramaJesus {
 
     public static void main(String[] args) {
         
-        porcentaje(12,30);
+        porcentaje(13,30);
         
     }
     
